@@ -1,4 +1,4 @@
-
+import {Entry} from './journal';
 
 $(document).ready(function (){
   $("#form").submit(function (event){
@@ -6,14 +6,10 @@ $(document).ready(function (){
   var titleInput = $("#title").val();
   var newEntry = new Entry(titleInput);
   newEntry.capitalize();
-  $("#output-here").html(newEntry);
-  console.log(newEntry);
+  $("#output-here").text(newEntry.title);
 
 
   })
 
 
-
-
-  
 })
