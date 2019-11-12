@@ -1,4 +1,5 @@
 import {Entry} from './journal';
+import './styles.css';
 
 $(document).ready(function (){
   $("#form").submit(function (event){
