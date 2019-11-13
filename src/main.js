@@ -5,12 +5,19 @@ $(document).ready(function (){
   $("#form").submit(function (event){
   event.preventDefault ();
   var titleInput = $("#title").val();
-  var newEntry = new Entry(titleInput);
+  var bodyInput = $("#body").val();
+  var newEntry = new Entry(titleInput, bodyInput);
   newEntry.capitalize();
-  $("#output-here").text(newEntry.title);
+  newEntry.countCharacters();
 
 
-  })
+  $("#output-title").text(newEntry.title);
+  $("#output-body").text(newEntry.body);
+  $("#title-words-count").text(newEntry.characterCount);
 
 
-})
+
+  });
+
+
+});

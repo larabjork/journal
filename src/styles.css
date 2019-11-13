@@ -1,3 +1,7 @@
 body {
   background-color: gray;
 }
+
+#body[type="text"] {
+    width: 500px;
+}
